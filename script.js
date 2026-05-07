@@ -1,10 +1,28 @@
 const menuButton = document.querySelector(".menu-toggle");
 const siteNav = document.querySelector(".site-nav");
 
+if (new URLSearchParams(window.location.search).get("grid") === "1") {
+  document.body.classList.add("show-mobile-grid");
+}
+
 if (menuButton && siteNav) {
   menuButton.addEventListener("click", () => {
     const isOpen = siteNav.classList.toggle("open");
     menuButton.setAttribute("aria-expanded", String(isOpen));
+  });
+
+  siteNav.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      siteNav.classList.remove("open");
+      menuButton.setAttribute("aria-expanded", "false");
+    });
+  });
+
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 760) {
+      siteNav.classList.remove("open");
+      menuButton.setAttribute("aria-expanded", "false");
+    }
   });
 }
 
