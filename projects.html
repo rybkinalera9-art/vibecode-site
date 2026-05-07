@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Проекты учеников - VibeCode</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body class="inner-premium">
+    <header class="site-header premium-header">
+      <a class="brand" href="index.html"><span class="brand-mark">VC</span><span>VibeCode</span></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav"><span></span><span></span><span></span></button>
+      <nav class="site-nav" id="site-nav">
+        <a href="index.html">Главная</a>
+        <a href="learn.html">Обучение</a>
+        <a href="community.html">Комьюнити</a>
+        <a href="team.html">Наша команда</a>
+        <a href="projects.html">Проекты учеников</a>
+      </nav>
+      <a class="header-cta" href="learn.html#free-course">Начать бесплатно</a>
+    </header>
+
+    <main>
+      <section class="page-hero inner-hero">
+        <p class="eyebrow">Портфолио</p>
+        <h1>Проекты наших студентов</h1>
+        <p>Подборка работ, которые участники собрали во время обучения: от Telegram-ботов до небольших SaaS-прототипов.</p>
+      </section>
+
+      <section class="section">
+        <div class="filters" aria-label="Фильтры проектов">
+          <button class="filter active" type="button" data-filter="all">Все</button>
+          <button class="filter" type="button" data-filter="bots">Telegram-боты</button>
+          <button class="filter" type="button" data-filter="web">Сайты и веб-приложения</button>
+          <button class="filter" type="button" data-filter="automation">Автоматизации</button>
+          <button class="filter" type="button" data-filter="saas">SaaS</button>
+        </div>
+        <div class="project-grid">
+          <article class="project-card" data-category="bots"><img src="assets/project-bot.png" alt="Интерфейс Telegram-бота"><div><h3>Lead Helper Bot</h3><p>Бот собирает заявки, задаёт уточняющие вопросы и отправляет лиды в таблицу.</p><span>Telegram Bot API · Sheets · AI prompts</span><strong>Автор: Даниил</strong><a class="text-link" href="#">Посмотреть проект</a></div></article>
+          <article class="project-card" data-category="web"><img src="assets/project-web.png" alt="Лендинг онлайн-курса"><div><h3>Course Landing</h3><p>Адаптивный лендинг с программой, тарифами, отзывами и формой заявки.</p><span>HTML · CSS · JavaScript</span><strong>Автор: Алина</strong><a class="text-link" href="#">Посмотреть проект</a></div></article>
+          <article class="project-card" data-category="automation"><img src="assets/project-auto.png" alt="Панель автоматизации"><div><h3>Report Flow</h3><p>Автоматизация собирает данные, формирует отчёт и отправляет его команде.</p><span>Make · API · Google Sheets</span><strong>Автор: Кирилл</strong><a class="text-link" href="#">Посмотреть проект</a></div></article>
+          <article class="project-card" data-category="saas"><img src="assets/project-saas.png" alt="Дашборд SaaS"><div><h3>Mini CRM</h3><p>Прототип CRM для малого бизнеса: сделки, статусы, заметки и быстрый поиск.</p><span>React · Supabase · AI assistant</span><strong>Автор: Мария</strong><a class="text-link" href="#">Посмотреть проект</a></div></article>
+        </div>
+      </section>
+
+      <section class="section cta-band">
+        <div><p class="eyebrow">Хочешь сюда попасть?</p><h2>Собери свой первый проект на VibeCode</h2><p>Пройди курс, опубликуй результат и добавь работу в галерею студентов.</p></div>
+        <a class="button primary" href="learn.html#free-course">Пройти курс</a>
+      </section>
+    </main>
+
+    <footer class="site-footer premium-footer">
+      <div><a class="brand" href="index.html"><span class="brand-mark">VC</span><span>VibeCode</span></a><p>Практичное обучение созданию проектов с ИИ.</p></div>
+      <nav><a href="index.html">Главная</a><a href="learn.html">Обучение</a><a href="community.html">Комьюнити</a><a href="team.html">Команда</a></nav>
+      <div class="socials"><a href="#">Telegram</a><a href="#">YouTube</a><a href="#">VK</a><a href="#">Discord</a></div>
+      <p class="copyright">© 2026 VibeCode</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

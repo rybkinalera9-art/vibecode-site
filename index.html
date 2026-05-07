@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>VibeCode - программируй с ИИ</title>
+    <meta name="description" content="VibeCode помогает новичкам создавать реальные проекты с помощью ИИ, даже без опыта программирования.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              vibeBg: "#F8F6F0",
+              vibeText: "#1C1C1C",
+              vibeMuted: "#2F2F2F",
+              vibeAccent: "#5FE66B",
+              vibeGreenSurface: "#E8F5E0",
+              vibeBorder: "#EDE8E0"
+            },
+            fontFamily: {
+              heading: ["Space Grotesk", "Inter", "sans-serif"],
+              body: ["Inter", "sans-serif"]
+            }
+          }
+        }
+      };
+    </script>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body class="home-premium bg-vibeBg text-vibeText font-body">
+    <header class="site-header premium-header">
+      <a class="brand" href="index.html" aria-label="VibeCode на главную">
+        <span class="brand-mark">VC</span>
+        <span>VibeCode</span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="site-nav" id="site-nav">
+        <a href="index.html">Главная</a>
+        <a href="learn.html">Обучение</a>
+        <a href="community.html">Комьюнити</a>
+        <a href="team.html">Наша команда</a>
+        <a href="projects.html">Проекты учеников</a>
+      </nav>
+      <a class="header-cta" href="learn.html#free-course">Начать бесплатно</a>
+    </header>
+
+    <main>
+      <section class="premium-hero home-hero">
+        <div class="premium-hero__copy motion-fade">
+          <p class="premium-kicker">Vibe Coding для новичков</p>
+          <h1 class="premium-title">
+            <span>VibeCode —</span>
+            <span>создавай</span>
+            <span>проекты с ИИ</span>
+            <span>без лишней</span>
+            <span>теории</span>
+          </h1>
+          <p class="premium-description">Научись превращать идеи в сайты, ботов и автоматизации, даже если раньше ты никогда не программировал.</p>
+          <div class="premium-actions">
+            <a class="premium-button premium-button--primary" href="learn.html#free-course">Начать бесплатный курс</a>
+            <a class="premium-button premium-button--ghost" href="#prompts">Скачать 15 мощных промптов</a>
+          </div>
+        </div>
+
+        <div class="premium-hero__visual motion-rise" aria-label="Пример рабочего пространства VibeCode">
+          <div class="workspace-card">
+            <div class="workspace-topbar">
+              <div>
+                <p>AI + Code Workspace</p>
+                <span>Prompt, project board, preview</span>
+              </div>
+              <div class="workspace-status">online</div>
+            </div>
+            <div class="workspace-body">
+              <div class="workspace-panel workspace-panel--chat">
+                <span class="panel-label">Prompt</span>
+                <h2>Создай реальный проект с ИИ</h2>
+                <p>Идея превращается в структуру, задачи, код, проверку и опубликованный результат.</p>
+                <div class="prompt-chip-row">
+                  <span>AI review</span>
+                  <span>UI polish</span>
+                </div>
+              </div>
+              <div class="task-stack">
+                <article class="task-card task-card--active">
+                  <span>01</span>
+                  <div><h3>Идея проекта</h3><p>Формулируем цель и результат</p></div>
+                </article>
+                <article class="task-card">
+                  <span>02</span>
+                  <div><h3>Промпты</h3><p>Разбиваем задачу на запросы</p></div>
+                </article>
+                <article class="task-card">
+                  <span>03</span>
+                  <div><h3>Прототип</h3><p>Собираем первые экраны и логику</p></div>
+                </article>
+                <article class="task-card">
+                  <span>04</span>
+                  <div><h3>Проверка</h3><p>Ищем ошибки и улучшаем UX</p></div>
+                </article>
+                <article class="task-card">
+                  <span>05</span>
+                  <div><h3>Публикация</h3><p>Выкладываем и показываем работу</p></div>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="premium-process" id="why">
+        <div class="premium-section-head motion-fade">
+          <p class="premium-kicker">Почему VibeCode</p>
+          <h2>Учимся через действие, а не через бесконечные лекции</h2>
+        </div>
+        <div class="premium-grid">
+          <article class="premium-card motion-rise">
+            <span class="premium-card-index">01</span>
+            <h3>Проекты с первого дня</h3>
+            <p>Каждый урок заканчивается работающим результатом: лендингом, ботом, мини-сервисом или автоматизацией.</p>
+          </article>
+          <article class="premium-card motion-rise">
+            <span class="premium-card-index">02</span>
+            <h3>ИИ как напарник</h3>
+            <p>Ты учишься ставить задачи, проверять ответы модели и собирать код без хаоса и случайных правок.</p>
+          </article>
+          <article class="premium-card motion-rise">
+            <span class="premium-card-index">03</span>
+            <h3>Понятный маршрут</h3>
+            <p>От первого промпта до деплоя: короткие шаги, чек-листы и понятные критерии готового проекта.</p>
+          </article>
+          <article class="premium-card motion-rise">
+            <span class="premium-card-index">04</span>
+            <h3>Комьюнити рядом</h3>
+            <p>Можно показать работу, получить обратную связь и найти людей для совместных экспериментов.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="premium-split" id="how">
+        <div class="premium-section-head motion-fade">
+          <p class="premium-kicker">Как это работает</p>
+          <h2>Четыре шага от идеи до опубликованного проекта</h2>
+        </div>
+        <div class="premium-step-list motion-rise">
+          <div class="premium-step"><b>1</b><span>Формулируешь идею и цель проекта.</span></div>
+          <div class="premium-step"><b>2</b><span>Разбиваешь задачу на промпты и экраны.</span></div>
+          <div class="premium-step"><b>3</b><span>Собираешь прототип вместе с ИИ.</span></div>
+          <div class="premium-step"><b>4</b><span>Проверяешь, улучшаешь и публикуешь.</span></div>
+        </div>
+      </section>
+
+      <section class="premium-results">
+        <div class="premium-section-head motion-fade">
+          <p class="premium-kicker">Результаты обучения</p>
+          <h2>После курса ты сможешь уверенно запускать свои идеи</h2>
+        </div>
+        <div class="premium-result-grid">
+          <p>Писать сильные промпты для разработки.</p>
+          <p>Создавать лендинги и простые веб-приложения.</p>
+          <p>Делать Telegram-ботов и автоматизации.</p>
+          <p>Понимать структуру проекта и исправлять ошибки.</p>
+          <p>Публиковать работу и собирать портфолио.</p>
+          <p>Говорить с разработчиками на одном языке.</p>
+        </div>
+      </section>
+
+      <section class="premium-testimonials">
+        <div class="premium-section-head row-head motion-fade">
+          <div>
+            <p class="premium-kicker">Отзывы</p>
+            <h2>Ученики быстро переходят от “я не умею” к “я сделал”</h2>
+          </div>
+          <div class="carousel-controls">
+            <button class="icon-button" type="button" data-carousel-prev aria-label="Предыдущий отзыв">‹</button>
+            <button class="icon-button" type="button" data-carousel-next aria-label="Следующий отзыв">›</button>
+          </div>
+        </div>
+        <div class="testimonial-carousel premium-carousel" data-carousel>
+          <article class="testimonial active">
+            <p>“Я собрала первый сайт за вечер и впервые поняла, как разговаривать с ИИ не общими словами, а задачами.”</p>
+            <strong>Алина, маркетолог</strong>
+          </article>
+          <article class="testimonial">
+            <p>“Курс помог не бояться кода. Теперь у меня есть бот для заявок и план, что улучшать дальше.”</p>
+            <strong>Игорь, предприниматель</strong>
+          </article>
+          <article class="testimonial">
+            <p>“Самое ценное - понятный процесс. Я перестала копировать ответы ИИ вслепую и начала управлять проектом.”</p>
+            <strong>Маша, дизайнер</strong>
+          </article>
+        </div>
+      </section>
+
+      <section class="premium-lessons" id="lessons">
+        <div class="premium-section-head motion-fade">
+          <p class="premium-kicker">Популярные уроки</p>
+          <h2>Стартовые темы, которые дают быстрый результат</h2>
+        </div>
+        <div class="premium-lesson-grid premium-lesson-grid--four">
+          <article class="premium-lesson motion-rise">
+            <img src="assets/lesson-prompts.png" alt="">
+            <h3>Промпты для разработки</h3>
+            <p>Как ставить ИИ точные задачи и получать полезный код.</p>
+          </article>
+          <article class="premium-lesson motion-rise">
+            <img src="assets/lesson-site.png" alt="">
+            <h3>Первый лендинг</h3>
+            <p>Собираем структуру, визуал и адаптивную версию.</p>
+          </article>
+          <article class="premium-lesson motion-rise">
+            <img src="assets/lesson-bot.png" alt="">
+            <h3>Telegram-бот</h3>
+            <p>Делаем простого помощника для заявок и ответов.</p>
+          </article>
+          <article class="premium-lesson motion-rise">
+            <img src="assets/lesson-deploy.png" alt="">
+            <h3>Публикация проекта</h3>
+            <p>Проверяем, исправляем и выкладываем работу онлайн.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="premium-final-cta motion-rise" id="prompts">
+        <div>
+          <p class="premium-kicker">Лид-магнит</p>
+          <h2>Забери 15 промптов для старта в vibe coding</h2>
+          <p>Подойдут для лендингов, ботов, автоматизаций, поиска ошибок и улучшения интерфейса.</p>
+        </div>
+        <a class="premium-button premium-button--primary" href="learn.html#free-course">Получить промпты</a>
+      </section>
+    </main>
+
+    <footer class="site-footer premium-footer">
+      <div>
+        <a class="brand" href="index.html"><span class="brand-mark">VC</span><span>VibeCode</span></a>
+        <p>Практичное обучение созданию проектов с ИИ.</p>
+      </div>
+      <nav>
+        <a href="learn.html">Обучение</a>
+        <a href="community.html">Комьюнити</a>
+        <a href="team.html">Команда</a>
+        <a href="projects.html">Проекты</a>
+        <a href="#">Политика конфиденциальности</a>
+      </nav>
+      <div class="socials">
+        <a href="#">Telegram</a>
+        <a href="#">YouTube</a>
+        <a href="#">VK</a>
+        <a href="#">Discord</a>
+      </div>
+      <p class="copyright">© 2026 VibeCode</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script type="module">
+      import { animate, stagger } from "https://cdn.jsdelivr.net/npm/framer-motion@12/+esm";
+
+      animate(".motion-fade", { opacity: [0, 1], y: [18, 0] }, { duration: 0.75, delay: stagger(0.08), easing: "ease-out" });
+      animate(".motion-rise", { opacity: [0, 1], y: [28, 0] }, { duration: 0.8, delay: stagger(0.1), easing: "ease-out" });
+      animate(".task-card", { opacity: [0, 1], x: [18, 0] }, { duration: 0.55, delay: stagger(0.08, { startDelay: 0.35 }), easing: "ease-out" });
+    </script>
+  </body>
+</html>
