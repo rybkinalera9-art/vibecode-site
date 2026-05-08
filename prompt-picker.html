@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Prompt Picker - VibeCode</title>
+    <meta name="description" content="Интерактивный Prompt Picker от VibeCode: выберите задачу и получите готовый промпт для работы с AI.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body class="inner-premium prompt-picker-page">
+    <header class="site-header premium-header">
+      <a class="brand" href="index.html"><span class="brand-mark">VC</span><span>VibeCode</span></a>
+      <button class="menu-toggle" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="site-nav"><span></span><span></span><span></span></button>
+      <nav class="site-nav" id="site-nav">
+        <a href="index.html">Главная</a>
+        <a href="learn.html">Обучение</a>
+        <a href="community.html">Комьюнити</a>
+        <a href="team.html">Наша команда</a>
+        <a href="projects.html">Проекты учеников</a>
+        <a href="prompt-picker.html" aria-current="page">Prompt Picker</a>
+      </nav>
+      <a class="header-cta" href="learn.html#free-course">Начать бесплатно</a>
+    </header>
+
+    <main>
+      <section class="page-hero inner-hero prompt-picker-hero">
+        <div>
+          <p class="eyebrow">Prompt Picker</p>
+          <h1>Выбери задачу и забери готовый промпт для AI</h1>
+          <p>Мини-инструмент для vibe coding: быстро собрать MVP, привести код в порядок, ускорить проект или подготовить его к enterprise-уровню.</p>
+        </div>
+        <div class="prompt-picker-orbit" aria-hidden="true">
+          <span>AI</span>
+          <span>MVP</span>
+          <span>Clean</span>
+          <span>Scale</span>
+        </div>
+      </section>
+
+      <section class="section prompt-picker-tool" aria-labelledby="prompt-picker-title">
+        <div class="section-head">
+          <p class="eyebrow">Интерактивный выбор</p>
+          <h2 id="prompt-picker-title">Что нужно сделать с проектом?</h2>
+          <p>Нажми на задачу, а Prompt Picker соберет промпт с ролью, контекстом, шагами и ожидаемым форматом ответа.</p>
+        </div>
+
+        <article class="prompt-result prompt-result--centered" aria-live="polite">
+          <div class="prompt-result__top">
+            <div>
+              <p class="eyebrow">Готовый промпт</p>
+              <h3 data-prompt-title>Сделать enterprise</h3>
+            </div>
+            <span data-prompt-badge>Scale ready</span>
+          </div>
+
+          <label class="prompt-select-field" for="prompt-task-select">
+            <span>Нужный промпт</span>
+            <select id="prompt-task-select" data-prompt-select>
+              <option value="mvp">Быстро MVP</option>
+              <option value="clean">Почистить код</option>
+              <option value="speed">Ускорить</option>
+              <option value="enterprise" selected>Сделать enterprise</option>
+            </select>
+          </label>
+
+          <pre><code data-prompt-output></code></pre>
+          <div class="prompt-result__actions">
+            <button class="button primary" type="button" data-copy-prompt>Скопировать промпт</button>
+            <span data-copy-status aria-live="polite"></span>
+          </div>
+        </article>
+      </section>
+
+      <section class="section muted-band prompt-picker-guide">
+        <div class="section-head">
+          <p class="eyebrow">Как пользоваться</p>
+          <h2>Добавь свой контекст перед отправкой</h2>
+        </div>
+        <div class="feature-grid three">
+          <article class="feature-card">
+            <h3>1. Вставь промпт</h3>
+            <p>Скопируй выбранный шаблон в AI-чат или редактор кода, с которым работаешь.</p>
+          </article>
+          <article class="feature-card">
+            <h3>2. Добавь детали</h3>
+            <p>Укажи стек, ссылку на файл, текущую проблему, ограничения по времени и желаемый результат.</p>
+          </article>
+          <article class="feature-card">
+            <h3>3. Попроси план</h3>
+            <p>Начинай с диагностики и плана, а потом проси правки маленькими шагами, чтобы не потерять контроль.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section cta-band prompt-picker-cta">
+        <div>
+          <p class="eyebrow">VibeCode</p>
+          <h2>Хочешь научиться писать такие промпты самостоятельно?</h2>
+          <p>На курсе разбираем, как превращать идею в структуру, задачи, код, проверку и опубликованный проект.</p>
+        </div>
+        <a class="button primary" href="learn.html#free-course">Начать бесплатно</a>
+      </section>
+    </main>
+
+    <footer class="site-footer premium-footer">
+      <div><a class="brand" href="index.html"><span class="brand-mark">VC</span><span>VibeCode</span></a><p>Практичное обучение созданию проектов с ИИ.</p></div>
+      <nav><a href="index.html">Главная</a><a href="learn.html">Обучение</a><a href="prompt-picker.html">Prompt Picker</a><a href="community.html">Комьюнити</a><a href="projects.html">Проекты</a></nav>
+      <div class="socials"><a href="https://t.me/vibecode" target="_blank" rel="noopener">Telegram</a><a href="#">YouTube</a><a href="#">VK</a><a href="#">Discord</a></div>
+      <p class="copyright">© 2026 VibeCode</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

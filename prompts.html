@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>15 промптов для vibe coding - VibeCode</title>
+    <meta name="description" content="Подборка из 15 готовых промптов VibeCode для идеи, структуры, кода, отладки, UX и запуска проекта.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body class="inner-premium prompts-page">
+    <header class="site-header premium-header">
+      <a class="brand" href="index.html"><span class="brand-mark">VC</span><span>VibeCode</span></a>
+      <button class="menu-toggle" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="site-nav"><span></span><span></span><span></span></button>
+      <nav class="site-nav" id="site-nav">
+        <a href="index.html">Главная</a>
+        <a href="learn.html">Обучение</a>
+        <a href="community.html">Комьюнити</a>
+        <a href="team.html">Наша команда</a>
+        <a href="projects.html">Проекты учеников</a>
+        <a href="prompts.html" aria-current="page">15 промптов</a>
+      </nav>
+      <a class="header-cta" href="learn.html#free-course">Начать бесплатно</a>
+    </header>
+
+    <main>
+      <section class="page-hero inner-hero prompts-hero">
+        <div>
+          <p class="eyebrow">Бесплатная подборка</p>
+          <h1>15 промптов для старта в vibe coding</h1>
+          <p>Готовые запросы для тех, кто хочет быстрее превращать идею в структуру, код, понятный интерфейс и опубликованный проект.</p>
+          <div class="hero-actions">
+            <a class="button primary" href="#prompt-library">Смотреть промпты</a>
+            <a class="button secondary" href="learn.html#free-course">Начать бесплатный курс</a>
+          </div>
+        </div>
+        <aside class="prompts-hero-card" aria-label="Что внутри подборки">
+          <span>15</span>
+          <strong>готовых промптов</strong>
+          <p>Идея, MVP, структура, код, отладка, UX, деплой и улучшения.</p>
+        </aside>
+      </section>
+
+      <section class="section prompts-intro">
+        <div class="section-head">
+          <p class="eyebrow">Как устроена подборка</p>
+          <h2>Промпты ведут по маршруту от идеи до результата</h2>
+        </div>
+        <div class="feature-grid three">
+          <article class="feature-card">
+            <h3>Старт проекта</h3>
+            <p>Помогают сформулировать идею, аудиторию, MVP и первые шаги без лишней теории.</p>
+          </article>
+          <article class="feature-card">
+            <h3>Разработка</h3>
+            <p>Подходят для структуры, компонентов, кода, отладки и ускорения работы.</p>
+          </article>
+          <article class="feature-card">
+            <h3>Запуск</h3>
+            <p>Помогают улучшить UX, подготовить публикацию и понять, что делать во второй версии.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section muted-band prompt-library" id="prompt-library">
+        <div class="section-head">
+          <p class="eyebrow">Библиотека</p>
+          <h2>Скопируй нужный промпт и добавь свой контекст</h2>
+          <p>В каждом промпте замени текст в квадратных скобках на детали своего проекта.</p>
+        </div>
+
+        <div class="prompt-pack-grid">
+          <article class="prompt-pack-card">
+            <div class="prompt-pack-card__head">
+              <span>01</span>
+              <h3>Найти сильную идею</h3>
+            </div>
+            <p>Для старта, когда есть интерес, но пока нет четкого продукта.</p>
+            <pre><code>Ты - product mentor. Помоги мне выбрать идею для первого проекта с AI.
+
+Мои интересы: [напиши темы]
+Мои навыки: [что уже умеешь]
+Кому хочу помочь: [аудитория]
+
+Предложи 5 идей, оцени их по простоте, пользе и скорости запуска. В конце выбери одну лучшую идею для MVP.</code></pre>
+            <button class="button secondary" type="button" data-copy-card-prompt>Скопировать</button>
+          </article>
+
+          <article class="prompt-pack-card">
+            <div class="prompt-pack-card__head">
+              <span>02</span>
+              <h3>Собрать MVP</h3>
+            </div>
+            <p>Чтобы быстро понять, что делать в первой версии.</p>
+            <pre><code>Ты - senior product engineer. Помоги мне собрать MVP проекта.
+
+Идея: [опиши идею]
+Аудитория: [для кого]
+Главная польза: [какую проблему решает]
+Срок: [сколько времени есть]
+
+Определи ядро MVP, убери лишние функции и дай план разработки на 5-7 шагов.</code></pre>
+            <button class="button secondary" type="button" data-copy-card-prompt>Скопировать</button>
+          </article>
+
+          <article class="prompt-pack-card">
+            <div class="prompt-pack-card__head">
+              <span>03</span>
+              <h3>Описать пользователя</h3>
+            </div>
+            <p>Для точного позиционирования и понятных сценариев.</p>
+            <pre><code>Ты - UX researcher. Помоги описать пользователя моего проекта.
+
+Проект: [описание]
+Кому он нужен: [гипотеза]
+Проблема: [что болит]
+
+Составь 3 пользовательских портрета, их цели, страхи, частые ситуации и критерии успешного результата.</code></pre>
+            <button class="button secondary" type="button" data-copy-card-prompt>Скопировать</button>
+          </article>
+
+          <article class="prompt-pack-card">
+            <div class="prompt-pack-card__head">
+              <span>04</span>
+              <h3>Сделать структуру сайта</h3>
+            </div>
+            <p>Для лендинга, лонгрида или страницы продукта.</p>
+            <pre><code>Ты - UX writer и дизайнер лендингов. Собери структуру страницы.
+
+Продукт: [что продаем или объясняем]
+Аудитория: [для кого]
+Цель страницы: [заявка, регистрация, скачивание]
+
+Дай структуру блоков сверху вниз: заголовок, смысл блока, ключевой текст и CTA.</code></pre>
+            <button class="button secondary" type="button" data-copy-card-prompt>Скопировать</button>
+          </article>
+
+          <article class="prompt-pack-card">
+            <div class="prompt-pack-card__head">
+              <span>05</span>
+              <h3>Написать тексты</h3>
+            </div>
+            <p>Когда нужен понятный текст без воды и сложных формулировок.</p>
+            <pre><code>Ты - редактор сайта. Напиши тексты для страницы простым человеческим языком.
+
+Проект: [описание]
+Тон: [дружелюбный, экспертный, энергичный]
+Аудитория: [кто читает]
+
+Напиши hero, 4 преимущества, блок "как это работает", FAQ и финальный CTA.</code></pre>
+            <button class="button secondary" type="button" data-copy-card-prompt>Скопировать</button>
+          </article>
+
+          <article class="prompt-pack-card">
+            <div class="prompt-pack-card__head">
+              <span>06</span>
+              <h3>Собрать первый экран</h3>
+            </div>
+            <p>Для сильного hero-блока, который сразу объясняет продукт.</p>
+            <pre><code>Ты - product designer. Помоги собрать первый экран сайта.
+
+Название: [название]
+Что делает продукт: [описание]
+Для кого: [аудитория]
+Главное действие: [что должен нажать пользователь]
+
+Дай H1, подзаголовок, 2 кнопки, визуальную идею и 3 коротких proof-point.</code></pre>
+            <button class="button secondary" type="button" data-copy-card-prompt>Скопировать</button>
+          </article>
+
+          <article class="prompt-pack-card">
+            <div class="prompt-pack-card__head">
+              <span>07</span>
+              <h3>Спроектировать интерфейс</h3>
+            </div>
+            <p>Когда нужно превратить идею в понятные экраны.</p>
+            <pre><code>Ты - UX/UI designer. Спроектируй интерфейс для моего проекта.
+
+Проект: [описание]
+Главные действия пользователя: [список]
+Устройства: [mobile/desktop]
+
+Опиши ключевые экраны, элементы управления, состояния, пустые состояния и ошибки.</code></pre>
+            <button class="button secondary" type="button" data-copy-card-prompt>Скопировать</button>
+          </article>
+
+          <article class="prompt-pack-card">
+            <div class="prompt-pack-card__head">
+              <span>08</span>
+              <h3>Написать код компонента</h3>
+            </div>
+            <p>Для конкретной UI-детали или блока сайта.</p>
+            <pre><code>Ты - frontend developer. Напиши код компонента.
+
+Компонент: [что нужно]
+Стек: [HTML/CSS/JS, React, Vue и т.д.]
+Поведение: [что делает]
+Стиль: [цвета, размеры, настроение]
+
+Дай готовый код, объясни куда его вставить и какие классы/состояния важны.</code></pre>
+            <button class="button secondary" type="button" data-copy-card-prompt>Скопировать</button>
+          </article>
+
+          <article class="prompt-pack-card">
+            <div class="prompt-pack-card__head">
+              <span>09</span>
+              <h3>Почистить код</h3>
+            </div>
+            <p>Для рефакторинга без поломки текущего поведения.</p>
+            <pre><code>Ты - senior code reviewer. Помоги почистить код.
+
+Что делает проект: [кратко]
+Проблемный файл/фрагмент: [вставь код]
+Что нельзя ломать: [важные сценарии]
+
+Найди дубли, сложные места, плохие имена и предложи безопасный порядок рефакторинга.</code></pre>
+            <button class="button secondary" type="button" data-copy-card-prompt>Скопировать</button>
+          </article>
+
+          <article class="prompt-pack-card">
+            <div class="prompt-pack-card__head">
+              <span>10</span>
+              <h3>Найти ошибку</h3>
+            </div>
+            <p>Для багов, когда непонятно, почему все сломалось.</p>
+            <pre><code>Ты - debugging assistant. Помоги найти причину ошибки.
+
+Что я делал: [описание]
+Что ожидал: [ожидаемое поведение]
+Что произошло: [факт]
+Ошибка/лог: [вставь текст]
+Код: [вставь фрагмент]
+
+Сначала объясни вероятную причину, потом дай 3 проверки и только затем предложи исправление.</code></pre>
+            <button class="button secondary" type="button" data-copy-card-prompt>Скопировать</button>
+          </article>
+
+          <article class="prompt-pack-card">
+            <div class="prompt-pack-card__head">
+              <span>11</span>
+              <h3>Улучшить UX</h3>
+            </div>
+            <p>Для страницы, которая работает, но ощущается сырой.</p>
+            <pre><code>Ты - UX expert. Улучши пользовательский опыт.
+
+Страница/экран: [описание]
+Цель пользователя: [что должен сделать]
+Что смущает: [мои сомнения]
+
+Найди слабые места в ясности, навигации, тексте, CTA, состояниях и мобильной версии. Дай список улучшений по приоритету.</code></pre>
+            <button class="button secondary" type="button" data-copy-card-prompt>Скопировать</button>
+          </article>
+
+          <article class="prompt-pack-card">
+            <div class="prompt-pack-card__head">
+              <span>12</span>
+              <h3>Ускорить проект</h3>
+            </div>
+            <p>Для загрузки, тяжелых страниц и медленного интерфейса.</p>
+            <pre><code>Ты - performance engineer. Помоги ускорить проект.
+
+Тип проекта: [сайт/приложение/бот]
+Где тормозит: [загрузка, интерфейс, запросы]
+Что уже пробовали: [если пробовали]
+
+Дай диагностику, быстрые улучшения за 30-60 минут, глубокие улучшения и список метрик для проверки.</code></pre>
+            <button class="button secondary" type="button" data-copy-card-prompt>Скопировать</button>
+          </article>
+
+          <article class="prompt-pack-card">
+            <div class="prompt-pack-card__head">
+              <span>13</span>
+              <h3>Подготовить к запуску</h3>
+            </div>
+            <p>Финальная проверка перед публикацией.</p>
+            <pre><code>Ты - launch manager. Подготовь проект к запуску.
+
+Проект: [описание]
+Где будет опубликован: [хостинг/платформа]
+Что уже готово: [список]
+
+Составь чек-лист перед запуском: контент, адаптив, ошибки, формы, скорость, SEO, аналитика и резервный план.</code></pre>
+            <button class="button secondary" type="button" data-copy-card-prompt>Скопировать</button>
+          </article>
+
+          <article class="prompt-pack-card">
+            <div class="prompt-pack-card__head">
+              <span>14</span>
+              <h3>Сделать план второй версии</h3>
+            </div>
+            <p>Когда первая версия готова и хочется развивать продукт осмысленно.</p>
+            <pre><code>Ты - product strategist. Помоги спланировать вторую версию.
+
+Что уже есть: [функции MVP]
+Что говорят пользователи: [обратная связь]
+Цель роста: [больше заявок, удержание, продажи]
+
+Предложи 10 улучшений, отсортируй по пользе и сложности, выбери топ-3 на ближайшую итерацию.</code></pre>
+            <button class="button secondary" type="button" data-copy-card-prompt>Скопировать</button>
+          </article>
+
+          <article class="prompt-pack-card">
+            <div class="prompt-pack-card__head">
+              <span>15</span>
+              <h3>Сделать проект сильнее</h3>
+            </div>
+            <p>Для финального ревью, когда хочется поднять уровень результата.</p>
+            <pre><code>Ты - строгий, но полезный project reviewer. Оцени мой проект.
+
+Описание проекта: [что делает]
+Ссылка/код/скрин: [добавь материалы]
+Цель: [чего хочу добиться]
+
+Оцени идею, UX, текст, визуал, код, скорость и готовность к запуску. Дай честный список слабых мест и план улучшений на 7 дней.</code></pre>
+            <button class="button secondary" type="button" data-copy-card-prompt>Скопировать</button>
+          </article>
+        </div>
+      </section>
+
+      <section class="section cta-band prompts-cta">
+        <div>
+          <p class="eyebrow">Следующий шаг</p>
+          <h2>Промпты помогают начать, а система помогает довести проект до запуска</h2>
+          <p>На бесплатном курсе VibeCode показываем, как использовать AI не хаотично, а как понятный маршрут: идея, структура, код, проверка и публикация.</p>
+        </div>
+        <a class="button primary" href="learn.html#free-course">Начать бесплатный курс</a>
+      </section>
+    </main>
+
+    <footer class="site-footer premium-footer">
+      <div><a class="brand" href="index.html"><span class="brand-mark">VC</span><span>VibeCode</span></a><p>Практичное обучение созданию проектов с ИИ.</p></div>
+      <nav><a href="index.html">Главная</a><a href="learn.html">Обучение</a><a href="prompts.html">15 промптов</a><a href="community.html">Комьюнити</a><a href="projects.html">Проекты</a></nav>
+      <div class="socials"><a href="https://t.me/vibecode" target="_blank" rel="noopener">Telegram</a><a href="#">YouTube</a><a href="#">VK</a><a href="#">Discord</a></div>
+      <p class="copyright">© 2026 VibeCode</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
