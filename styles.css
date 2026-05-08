@@ -485,6 +485,119 @@ h3 { margin-bottom: 10px; font-size: clamp(18px, 2vw, 24px); line-height: 1.32; 
 }
 
 @media (max-width: 760px) {
+  .site-header.premium-header {
+    grid-template-columns: 1fr auto;
+    gap: 12px;
+    min-height: 68px;
+    padding: 13px 16px;
+    background: rgba(248, 246, 240, 0.92);
+  }
+
+  .premium-header .brand {
+    min-width: 0;
+    gap: 10px;
+    font-size: 16px;
+  }
+
+  .premium-header .brand-mark {
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+  }
+
+  .premium-header .menu-toggle {
+    justify-self: end;
+    display: grid;
+    place-content: center;
+    gap: 5px;
+    width: 42px;
+    height: 42px;
+    padding: 0;
+    border-color: transparent;
+    background: transparent;
+    box-shadow: none;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .premium-header .menu-toggle span {
+    width: 20px;
+    height: 2px;
+    border-radius: 999px;
+    background: var(--ink);
+    transition: transform 0.2s ease, opacity 0.2s ease, background 0.2s ease;
+  }
+
+  .premium-header .menu-toggle:focus {
+    outline: none;
+  }
+
+  .premium-header .menu-toggle:hover,
+  .premium-header .menu-toggle:focus-visible {
+    border-color: transparent;
+    background: transparent;
+    box-shadow: none;
+    outline: none;
+  }
+
+  .premium-header .menu-toggle:hover span,
+  .premium-header .menu-toggle:focus-visible span {
+    background: var(--green);
+  }
+
+  .premium-header .menu-toggle[aria-expanded="true"] {
+    border-color: transparent;
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .premium-header .menu-toggle[aria-expanded="true"] span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  .premium-header .menu-toggle[aria-expanded="true"] span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .premium-header .menu-toggle[aria-expanded="true"] span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+  .premium-header .menu-toggle[aria-expanded="true"]:hover span,
+  .premium-header .menu-toggle[aria-expanded="true"]:focus-visible span {
+    background: var(--green);
+  }
+
+  .premium-header .site-nav {
+    grid-column: 1 / -1;
+    display: none;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid rgba(237, 232, 224, 0.94);
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.92);
+    box-shadow: none;
+  }
+
+  .premium-header .site-nav.open {
+    display: grid;
+  }
+
+  .premium-header .site-nav a {
+    min-height: 42px;
+    display: flex;
+    align-items: center;
+    padding: 10px 12px;
+    border-radius: 12px;
+    font-size: 14px;
+  }
+
+  .premium-header .site-nav a:hover,
+  .premium-header .site-nav a:focus-visible {
+    background: var(--light-green);
+    color: var(--ink);
+  }
+
   .site-footer {
     grid-template-columns: 1fr 1fr;
     gap: 28px 22px;
