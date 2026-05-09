@@ -230,6 +230,158 @@ if (promptPicker) {
   setPrompt(select?.value || "enterprise");
 }
 
+const promptPackGrid = document.querySelector(".prompt-pack-grid");
+
+if (promptPackGrid) {
+  const promptItems = Array.from(promptPackGrid.querySelectorAll(".prompt-pack-card")).map((card, index) => ({
+    id: `prompt-${index + 1}`,
+    number: String(index + 1).padStart(2, "0"),
+    title: card.querySelector("h3")?.textContent?.trim() || `Промпт ${index + 1}`,
+    description: card.querySelector("p")?.textContent?.trim() || "",
+    text: card.querySelector("code")?.textContent?.trim() || ""
+  }));
+
+  if (promptItems.length) {
+    promptPackGrid.classList.add("is-terminal");
+    promptPackGrid.innerHTML = `
+      <article class="prompt-pack-terminal">
+        <div class="prompt-pack-terminal__top">
+          <div>
+            <p class="eyebrow">15 готовых промптов</p>
+            <h3 data-pack-title></h3>
+            <p data-pack-description></p>
+          </div>
+          <span data-pack-count></span>
+        </div>
+        <div class="prompt-search" data-pack-search>
+          <label class="prompt-search__field" for="prompt-pack-search">
+            <span>Поиск промта</span>
+            <span class="prompt-search__value"><input id="prompt-pack-search" type="text" autocomplete="off" data-pack-search-input><span aria-hidden="true" data-search-mirror></span><i aria-hidden="true"></i></span>
+          </label>
+          <div class="prompt-search__dropdown" data-pack-dropdown></div>
+        </div>
+        <pre><code data-pack-output></code></pre>
+        <div class="prompt-pack-terminal__actions">
+          <button class="button primary" type="button" data-copy-pack-prompt>Скопировать промпт</button>
+          <span data-copy-pack-status aria-live="polite"></span>
+        </div>
+      </article>
+    `;
+
+    const search = promptPackGrid.querySelector("[data-pack-search]");
+    const searchInput = promptPackGrid.querySelector("[data-pack-search-input]");
+    const searchMirror = promptPackGrid.querySelector("[data-search-mirror]");
+    const dropdown = promptPackGrid.querySelector("[data-pack-dropdown]");
+    const title = promptPackGrid.querySelector("[data-pack-title]");
+    const description = promptPackGrid.querySelector("[data-pack-description]");
+    const count = promptPackGrid.querySelector("[data-pack-count]");
+    const output = promptPackGrid.querySelector("[data-pack-output]");
+    const copyButton = promptPackGrid.querySelector("[data-copy-pack-prompt]");
+    const copyStatus = promptPackGrid.querySelector("[data-copy-pack-status]");
+    let activeText = promptItems[0].text;
+    let activeId = promptItems[0].id;
+
+    const renderDropdown = (query = "") => {
+      const normalizedQuery = query.trim().toLowerCase();
+      const filteredItems = promptItems.filter((item) => {
+        const haystack = `${item.title} ${item.description} ${item.text}`.toLowerCase();
+        return haystack.includes(normalizedQuery);
+      });
+
+      dropdown.innerHTML = "";
+
+      if (!filteredItems.length) {
+        const empty = document.createElement("div");
+        empty.className = "prompt-search__empty";
+        empty.textContent = "Ничего не найдено";
+        dropdown.appendChild(empty);
+        return;
+      }
+
+      filteredItems.forEach((item) => {
+        const option = document.createElement("button");
+        option.type = "button";
+        option.className = "prompt-search__option";
+        option.dataset.promptId = item.id;
+        option.classList.toggle("active", item.id === activeId);
+        option.innerHTML = `<span>${item.number}</span><strong>${item.title}</strong><small>${item.description}</small>`;
+        dropdown.appendChild(option);
+      });
+    };
+
+    const openDropdown = () => {
+      search.classList.add("open");
+      renderDropdown();
+    };
+
+    const closeDropdown = () => {
+      search.classList.remove("open");
+    };
+
+    const setPackPrompt = (id) => {
+      const selectedItem = promptItems.find((item) => item.id === id) || promptItems[0];
+      activeId = selectedItem.id;
+      activeText = selectedItem.text;
+      title.textContent = selectedItem.title;
+      description.textContent = selectedItem.description;
+      count.textContent = `${selectedItem.number} / ${promptItems.length}`;
+      output.textContent = selectedItem.text;
+      copyStatus.textContent = "";
+      searchInput.value = selectedItem.title;
+      searchMirror.textContent = selectedItem.title;
+      renderDropdown();
+    };
+
+    const copyPackPrompt = async () => {
+      try {
+        await navigator.clipboard.writeText(activeText);
+      } catch (error) {
+        const textarea = document.createElement("textarea");
+        textarea.value = activeText;
+        textarea.setAttribute("readonly", "");
+        textarea.style.position = "fixed";
+        textarea.style.opacity = "0";
+        document.body.appendChild(textarea);
+        textarea.select();
+        document.execCommand("copy");
+        textarea.remove();
+      }
+
+      copyStatus.textContent = "Скопировано";
+      window.setTimeout(() => {
+        copyStatus.textContent = "";
+      }, 1600);
+    };
+
+    searchInput.addEventListener("focus", openDropdown);
+    searchInput.addEventListener("click", openDropdown);
+    searchInput.addEventListener("input", () => {
+      searchMirror.textContent = searchInput.value || "";
+      openDropdown();
+    });
+
+    dropdown.addEventListener("click", (event) => {
+      const option = event.target.closest("[data-prompt-id]");
+
+      if (!option) {
+        return;
+      }
+
+      setPackPrompt(option.dataset.promptId);
+      closeDropdown();
+    });
+
+    document.addEventListener("click", (event) => {
+      if (!promptPackGrid.contains(event.target)) {
+        closeDropdown();
+      }
+    });
+
+    copyButton.addEventListener("click", copyPackPrompt);
+    setPackPrompt(promptItems[0].id);
+  }
+}
+
 const promptCopyButtons = document.querySelectorAll("[data-copy-card-prompt]");
 
 promptCopyButtons.forEach((button) => {
