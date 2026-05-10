@@ -1,6 +1,10 @@
 const menuButton = document.querySelector(".menu-toggle");
 const siteNav = document.querySelector(".site-nav");
 
+if (window.location.pathname === "/index" || window.location.pathname === "/index.html") {
+  window.history.replaceState(null, "", `/${window.location.search}${window.location.hash}`);
+}
+
 if (new URLSearchParams(window.location.search).get("grid") === "1") {
   document.body.classList.add("show-mobile-grid");
 }
